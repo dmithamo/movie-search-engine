@@ -33,7 +33,7 @@ app.get("/searchdb", function(req, res){
 })
 
 
-// Handle faulty routes. render custom error page
+// Handle faulty routes. Render custom error page
 app.get("*", function(req, res){
     var title = "404. Page Not Found";
     res.render("404", {title:title});
