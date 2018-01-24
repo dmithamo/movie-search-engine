@@ -6,30 +6,31 @@ var app = express();
 // Import request module
 var request = require("request");
 
-
-// Set up global variable 'movies' to be reassigned as list of retrieved movies
-var movies;
-
-// Make request to OMDB API
-query = "iron man"
-var omdbUrl = "http://www.omdbapi.com/?&apikey=b9a1e8c8&y=2013&s=" + query
-request(omdbUrl, function(error, response, body){
-    if(!error && response.statusCode === 200){
-        var jsonData = JSON.parse(body)
-        movies = jsonData["Search"]
-    }else{
-        console.log("REPORT\n" + "--".repeat(20) + "\n" + "error: " + error + "statusCode: "+ response.statusCode)
-    }
-})
-
-
 // Set default render engine as ejs
 app.set("view engine", "ejs");
 
+
 // The root route. Render Homepage
 app.get("/", function(req, res){
-    var title = "T-Nane's Movie Search Engine";
-    res.render("homepage", {title:title, movies:movies});
+    var title = "T8 Movies DB";
+    res.render("homepage", {title:title});
+})
+
+app.get("/searchdb", function(req, res){
+    var query = req.query.search;
+
+    url = "http://www.omdbapi.com/?&apikey=b9a1e8c8&s=" + query;
+    request(url, function(error, response, body){
+        if(!error && response.statusCode === 200){
+            var movieData = JSON.parse(body);
+            var movieList = movieData["Search"];
+            var resultsTitle = "This is What You Wanted";
+
+            res.render("search-results", {title:resultsTitle, movies:movieList});
+        }else{
+            console.log(response.statusCode, error);
+        }
+    })
 })
 
 

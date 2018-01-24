@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+<a href="/">Search Again</a>
+
+<h1>  Your search results  </h1>
+
+<ol>
+    <% movies.forEach(function(movie){ %>
+    <li>
+        <%= movie["Title"] %> <br>
+        <img src=" <%= movie['Poster'] %> " >
+    </li> 
+    <% }) %>
+</ol>
+
+<% include partials/footer %>
+

@@ -1,18 +1,11 @@
 <% include partials/header %>
 
-<h1>Movie List...</h1>
+<h1>  Welcome. Welcome. Welcome  </h1>
 
-<ol>
-    <% movies.forEach(function(movie){ %>
-    <li>
-        <%= movie["Title"] %> <br>
-        <img src=" <%= movie['Poster'] %> " >
-    </li> 
-    <% }) %>
-
-</ol>
-
-
+<form action="/searchdb" method="GET">
+    <input type="text" placeholder="search for" name="search">
+    <button>Search</button>
+</form>
 
 <% include partials/footer %>
 
