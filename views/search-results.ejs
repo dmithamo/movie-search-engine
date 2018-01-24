@@ -1,0 +1,26 @@
+<% include partials/header %>
+
+<a href="/">Search Again</a>
+
+<h1>  Your search results  </h1>
+
+<% if(movies){ %>
+    <ol>
+        <% movies.forEach(function(movie){ %>
+        <li>
+            <%= movie["Title"] %> <br>
+            <% if(movie['Poster'] !== "N/A") { %>
+                <img src=" <%= movie['Poster'] %> " alt="image">
+            <% }else{ %>
+                <img src="http://i.ebayimg.com/images/i/190349612320-0-1/s-l1000.jpg" alt="Image Missing">
+            <% } %>
+        </li> 
+        <% }) %>
+    </ol>
+    
+<% }else{ %>
+        <p>Nuthin found...</p>
+<% } %>
+
+<% include partials/footer %>
+
