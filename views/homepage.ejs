@@ -1,6 +1,18 @@
 <% include partials/header %>
 
-<h1>You're home...</h1>
+<h1>Movie List...</h1>
+
+<ol>
+    <% movies.forEach(function(movie){ %>
+    <li>
+        <%= movie["Title"] %> <br>
+        <img src=" <%= movie['Poster'] %> " >
+    </li> 
+    <% }) %>
+
+</ol>
+
+
 
 <% include partials/footer %>
 

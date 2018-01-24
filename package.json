@@ -23,6 +23,7 @@
   "homepage": "https://github.com/dmithamo/movie-search-engine#readme",
   "dependencies": {
     "ejs": "^2.5.7",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "request": "^2.83.0"
   }
 }
