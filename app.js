@@ -24,8 +24,7 @@ app.get("/searchdb", function(req, res){
         if(!error && response.statusCode === 200){
             var movieData = JSON.parse(body);
             var movieList = movieData["Search"];
-            var resultsTitle = "This is What You Wanted";
-
+            var resultsTitle = "This is What You Searched for";
             res.render("search-results", {title:resultsTitle, movies:movieList});
         }else{
             console.log(response.statusCode, error);
