@@ -50,6 +50,7 @@ input{
     border: 1px solid black;
     border-radius: 10px;
     text-transform: capitalize;
+    transition: 500ms all;
 }
 
 
@@ -86,6 +87,7 @@ a:hover, button:hover{
     color: blue;
     text-decoration: underline;
     font-size: 1.6em;
+    transition: 500ms all;
 }
 
 section, .section-homepage{
@@ -132,11 +134,13 @@ img{
 }
 
 p.headline{
-    font-family: 'Montserrat', sans-serif;
     padding: .5em;
-    font-size: .6em;
     font-weight: 700;
     text-align: start;
+}
+
+p.more{
+    font-size: 0.7em;
 }
 
 footer{
