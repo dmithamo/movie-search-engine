@@ -1,26 +1,52 @@
 <% include partials/header %>
 
-<a href="/">Search Again</a>
+<header>
+    <div class="home-box">
+        <a href="/">Home</a>
+    </div>
 
-<h1>  Your search results  </h1>
+    <div class="form-box">
+        <form action="/searchdb" method="GET">
+            <input type="text" placeholder="search for" name="search">
+            <button>Search</button>
+        </form>
+    </div>
 
-<% if(movies){ %>
-    <ol>
-        <% movies.forEach(function(movie){ %>
-        <li>
-            <%= movie["Title"] %> <br>
-            <% if(movie['Poster'] !== "N/A") { %>
-                <img src=" <%= movie['Poster'] %> " alt="image">
-            <% }else{ %>
-                <img src="http://i.ebayimg.com/images/i/190349612320-0-1/s-l1000.jpg" alt="Image Missing">
-            <% } %>
-        </li> 
-        <% }) %>
-    </ol>
+    <div class="end-box">
+        <a href="#">Useless link</a>
+    </div>
+</header>
+
+<section>
+    <h2>  Your search results for: <%= searchTerm %>  </h2>
+    <div class="wrapper">
     
-<% }else{ %>
-        <p>Nuthin found...</p>
-<% } %>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    
+    </div>
+    
+    <% if(movies){ %>
+        <ol>
+            <% movies.forEach(function(movie){ %>
+            <li>
+                <%= movie["Title"] %> <br>
+                <% if(movie['Poster'] !== "N/A") { %>
+                    <img src=" <%= movie['Poster'] %> " alt="image">
+                <% }else{ %>
+                    <img src="http://i.ebayimg.com/images/i/190349612320-0-1/s-l1000.jpg" alt="Image Missing">
+                <% } %>
+            </li> 
+            <% }) %>
+        </ol>
+        
+    <% }else{ %>
+            <p>Nuthin found...</p>
+    <% } %>
+</section>
 
 <% include partials/footer %>
 

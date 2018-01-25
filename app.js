@@ -10,6 +10,10 @@ var request = require("request");
 app.set("view engine", "ejs");
 
 
+// Use resources in 'public' folder
+app.use(express.static("public"))
+
+
 // The root route. Render Homepage
 app.get("/", function(req, res){
     var title = "T8 Movies DB";
@@ -25,7 +29,7 @@ app.get("/searchdb", function(req, res){
             var movieData = JSON.parse(body);
             var movieList = movieData["Search"];
             var resultsTitle = "This is What You Searched for";
-            res.render("search-results", {title:resultsTitle, movies:movieList});
+            res.render("search-results", {searchTerm: query, title:resultsTitle, movies:movieList});
         }else{
             console.log(response.statusCode, error);
         }
