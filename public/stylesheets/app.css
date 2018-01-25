@@ -1,0 +1,163 @@
+html, body{
+    top: 0;
+    width: 100%;
+    /* background-image: url(https://www.wallpaperink.co.uk/gallery/shutterstock/Film/Custom_Wallpaper_Clear_Silver3171788647.jpg);
+    background-size: cover; */
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Comfortaa', cursive;   
+}
+
+h1{
+    margin: 0;
+}
+
+header, .header-homepage{
+    top: 0;
+    width: 100%;
+    position: fixed;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 50px;;
+    grid-gap: 1em;
+    border: none;
+    background-color:rgb(255, 255, 255);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 1);
+    margin: 0;
+}
+
+header > div{
+    padding: 0.5em;
+    color: rgb(0, 0, 0);
+    justify-self: center;
+}
+
+.header-homepage > div{
+    padding: 0.5em;
+    color: rgb(0, 0, 0);
+    justify-self: center;
+    text-transform: capitalize;
+}
+
+
+input{
+    background-color: rgb(221, 221, 221);
+    height: 30px;
+    line-height: 30px;
+    padding-left: 0.5em; 
+    outline:none;
+    border: 1px solid black;
+    border-radius: 10px;
+    text-transform: capitalize;
+}
+
+
+input:focus{
+    border: 1px solid blue;
+    box-shadow: 0 0 1px 1px blue;
+    background-color: white;
+}
+
+button{
+    height: 30px;
+    line-height: 30px;
+    width: 70px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background: none;
+    border: none;
+    outline:none;
+    font-size: 1.5em;
+}
+
+a{
+    height: 30px;
+    line-height: 30px;
+    font-size: 1.5em;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+a:hover, button:hover{
+    text-shadow: 0 0 1px rgb(69, 255, 13);
+    color: blue;
+    text-decoration: underline;
+    font-size: 1.6em;
+}
+
+section, .section-homepage{
+    text-align: center;
+    width: 90%;
+    padding: 60px 0;
+}
+
+.section-homepage{
+    margin-top: 10em;
+    margin: 0 auto;
+}
+
+h2{
+    text-transform: capitalize;
+    margin: 5px 0 5px 0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+ol{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+    list-style: none;
+}
+
+li{
+    /* height: auto; */
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.6);
+}
+
+li > div:nth-child(even){
+    padding: .5em;
+}
+
+img{
+    width: 120px;
+    height: auto;
+}
+
+p.headline{
+    font-family: 'Montserrat', sans-serif;
+    padding: .5em;
+    font-size: .6em;
+    font-weight: 700;
+    text-align: start;
+}
+
+footer{
+    justify-content:flex-end; 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+    text-align: center;
+    width: 100%;
+    height: 4%;
+    line-height: 4%;
+    background-color:rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 1);
+}
+
+footer >div{
+    justify-self: end;
+}
+
+footer >div:nth-of-type(2){
+    justify-self: start;
+}
