@@ -1,10 +1,13 @@
 body{
     margin: 0;
     background-color: rgb(255, 255, 255);
+    max-height: 100%;
+    font-family: 'Comfortaa', cursive;
     
 }
 
 header{
+    font-family: 'Montserrat', sans-serif;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 50px;;
@@ -66,17 +69,40 @@ section{
 h2{
     text-transform: capitalize;
     margin: 5px 0 5px 0;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
 }
 
-.wrapper{
+ol{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1em;
-    grid-auto-rows: 100px;
+    list-style: none;
 }
 
-.wrapper > div{
-    background-color: greenyellow;
-    padding: 1em;
+li{
+    height: 210px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: rgb(255, 255, 255);
     box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.6);
+}
+
+li > div:nth-child(even){
+    padding: .5em;
+    font-size: .8em;
+    font-weight: 700;
+}
+
+img{
+    width: auto;
+    height: 210px;
+}
+
+p.headline{
+    font-size: 1.2em;
+    margin-top:0;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
 }
