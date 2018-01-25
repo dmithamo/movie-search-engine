@@ -2,13 +2,13 @@
 
 <header>
     <div class="home-box">
-        <a href="/">Home</a>
+        <a href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
     </div>
 
     <div class="form-box">
         <form action="/searchdb" method="GET">
             <input type="text" placeholder="search for" name="search">
-            <button>Search</button>
+            <button> <i class="fa fa-search" aria-hidden="true"></i>   </button>
         </form>
     </div>
 
@@ -18,7 +18,7 @@
 </header>
 
 <section>
-    <h2>  Your search results for: <%= searchTerm %>  </h2>
+    <h2>  You searched for : <%= searchTerm %>  </h2>
    
     <% if(movies){ %>
         <ol>
@@ -44,7 +44,6 @@
     <% } %>
 </section>
 
-<footer>
-    <% include partials/footer %>
-</footer>
+<% include partials/footer %>
+
 

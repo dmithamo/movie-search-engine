@@ -1,11 +1,25 @@
 <% include partials/header %>
 
-<h1>  Welcome. Welcome. Welcome  </h1>
 
-<form action="/searchdb" method="GET">
-    <input type="text" placeholder="search for" name="search">
-    <button>Search</button>
-</form>
+<div class="header-homepage">
+    <div></div>
+
+    <div>
+        <h1> <i class="fa fa-video-camera" aria-hidden="true"></i> t8s omdb  </h1>
+    </div>
+
+    <div></div>
+</div>
+
+<section class="section-homepage">
+    <form action="/searchdb" method="GET">
+        <input type="text" placeholder="Enter movie title " name="search">
+        <button> <i class="fa fa-search" aria-hidden="true"></i> </button>
+    </form>
+    <p>Search from thousands of movies in our database!</p>
+</section>
+
+
 
 <% include partials/footer %>
 
