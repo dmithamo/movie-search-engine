@@ -2,7 +2,7 @@
 ### Building a Search Engine that Utilizes an API (omdb API -  [ http://www.omdbapi.com/ ]) as I learn node.js 
 
 ### Technologies used in this app:
-* Javascript, specifically [Node.js] , and frameworks thereof (specifically, [express])
+* Javascript, specifically `Node.js` , and frameworks thereof (specifically, `express`)
 * HTML
 * CSS
 
@@ -22,7 +22,8 @@ And voila! Access `localhost:3000` on your favorite browser (of course I mean **
 
 ### Todos
 
- - Add functionality
+ - Add functionality 
+    ***More info on a movie [Synopsis, Rating, Link to Trailer]***
  - Learn, and use, TDD
  - Add Colour. Because not all the world is color blind.
 
