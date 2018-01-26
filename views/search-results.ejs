@@ -5,15 +5,16 @@
         <a href="/"><i class="fa fa-home" aria-hidden="true"></i></a>
     </div>
 
-    <div class="form-box">
-        <form action="/searchdb" method="GET">
-            <input type="text" placeholder="search for" name="search">
+    <div class="the-form">
+        <form class="form-box" action="/searchdb" method="GET">
+            <input type="text" placeholder="Which movie are you looking to find?" name="search">
             <button> <i class="fa fa-search" aria-hidden="true"></i>   </button>
         </form>
     </div>
 
     <div class="end-box">
-        <a href="#">Useless link</a>
+        <a href="#"> <i class="fa fa-user" aria-hidden="true"></i> </a>
+        <a href="#"> <i class="fa fa-user-plus" aria-hidden="true"></i> </a>
     </div>
 </header>
 
@@ -34,15 +35,14 @@
                 </div>
                 <div>
                     <p class="headline"> <%= movie["Title"] %> </p> 
-                    <p class="more"> <%= movie["Year"] %> </p> 
-                    <p class="more"> <%= movie["Title"] %> </p> 
+                    <p class="more"> Year:  <%= movie["Year"] %> </p> 
                 </div>
             </li> 
             <% }) %>
         </ol>
         
     <% }else{ %>
-            <p class="headline">Nuthin found...</p>
+            <h3>We found nuthin ... nuthin aTall :( <br> <a href="/">Try again?</a> </h3>
     <% } %>
 </section>
 

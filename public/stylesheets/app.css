@@ -27,10 +27,32 @@ header, .header-homepage{
     margin: 0;
 }
 
+.header-homepage{
+    grid-template-columns: repeat(2, 1fr);
+}
+
 header > div{
     padding: 0.5em;
     color: rgb(0, 0, 0);
     justify-self: center;
+}
+
+header > .the-form{
+    justify-self: stretch;
+}
+
+.form-box {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.form-box > input{
+    justify-self: stretch;
+}
+.end-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3em;
 }
 
 .header-homepage > div{
@@ -49,7 +71,7 @@ input{
     outline:none;
     border: 1px solid black;
     border-radius: 10px;
-    text-transform: capitalize;
+    text-transform: initial;
     transition: 500ms all;
 }
 
@@ -61,9 +83,7 @@ input:focus{
 }
 
 button{
-    height: 30px;
-    line-height: 30px;
-    width: 70px;
+    width: 5%;
     color: rgb(0, 0, 0);
     font-weight: bold;
     background: none;
@@ -101,6 +121,48 @@ section, .section-homepage{
     margin: 0 auto;
 }
 
+section > h1{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 5%;
+    font-size: 5em;
+}
+
+section > h3{
+    margin: 1% auto;
+    letter-spacing: 1px;
+    
+}
+
+section > h3 > a{
+    margin: 1% auto;
+    letter-spacing: 1px;
+    font-size: 1em;
+    color: blue;
+}
+
+section > h1 > .t8{
+    font-size: .2em;
+}
+section > h1 > .omdb{
+    text-transform: uppercase;
+}
+
+section > form > input{
+    width: 40%;
+    margin: 1%;
+}
+
+#error-page{
+    width: 90%;
+    text-align: center;
+    margin: 10% auto 5%;
+}
+
+#home-error{
+    font-size: 5em;
+}
+
+
 h2{
     text-transform: capitalize;
     margin: 5px 0 5px 0;
@@ -134,20 +196,21 @@ img{
 }
 
 p.headline{
-    padding: .5em;
     font-weight: 700;
     text-align: start;
+    margin-bottom: 0;
 }
 
 p.more{
-    font-size: 0.7em;
+    padding-left: .5em;
+    font-size: 0.5em;
+    text-align: start;
 }
 
 footer{
     justify-content:flex-end; 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2em;
     text-align: center;
     width: 100%;
     height: 4%;
@@ -160,6 +223,7 @@ footer{
 
 footer >div{
     justify-self: end;
+    margin-right: 5em;
 }
 
 footer >div:nth-of-type(2){
